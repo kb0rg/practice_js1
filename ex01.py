@@ -1,3 +1,7 @@
+"""
+example python code to translate into JS
+"""
+
 def sum_mult(n):
 	sum = 0
 	for i in range(n):
