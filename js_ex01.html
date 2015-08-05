@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Javascript Learning</title>
+</head>
+<body>
+  <h1>Javascript Learning</h1>
+  <h3>see console for results of testing!</h3>
+  <script>
+
+ //  	ex01: translate python to JS:
+	// ## Find and print the sum of all the multiples of 3 or 5 below 1000.
+
+	// sum = 0
+	// for i in range(1000):
+	//     if i % 3 == 0 or i % 5 == 0:
+	//         sum += i
+	// print sum
+
+	var i = 1;
+	var sum = 0;
+	while (i < 1000){
+		console.log(i);
+		if ((i % 3) == 0 || (i % 5) == 0){
+			sum += i;
+			console.log(sum);
+		}
+		i++;
+	}
+	console.log("js result is:");
+	console.log(sum);
+	console.log("python says the answer is: 233168");
+
+  </script>
+</body>
+</html>
