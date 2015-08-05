@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Javascript Learning</title>
+</head>
+<body>
+  <h1>Javascript Learning</h1>
+  <h2> Sum of even-termed Fibonacci numbers </h2>
+  <h3>see console for results of testing!</h3>
+  <script>
+
+ //  	ex02: translate python to JS:
+	// By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
+
+	// create "sum" and "filter" functions
+
+
+// FILTER:
+
+// Filter a list to those items that return true for the given function.
+
+function filter(aFunction, aList) {
+	var newList = []
+	for (var i = 1; i < aList.length; i++){
+		if (aFunction(aList[i]) == true){
+			newList.push(aList[i]);
+		} 
+	}
+    return newList;
+}
+
+// SUM (of items in list):
+function sumList(someList){
+	var listSum = 0
+	for (var i=0; i < someList.length; i++){
+		listSum = listSum + someList[i]
+	}
+
+	return listSum
+}
+
+// IS EVEN test
+function isEven(num){
+	return num % 2 == 0;
+}
+
+
+// fibonacciSet
+// Return list of fibonacci numbers going up to but not beyond max.
+// def fibonacci_set(max):
+//     """Return list of fibonacci numbers going up to but not beyond max."""
+//     if max > 1:
+//         fib_list = [1]
+//         current_fib = 1
+//         while current_fib < max:
+//             fib_list.append(current_fib)
+//             current_fib = fib_list[-1] + fib_list[-2]
+//         return fib_list
+//     else:
+//         return [1, 1]
+
+function fibonacciSet(max){
+	var fibList = [1];
+	var current_fib = 1;
+	while (current_fib < (max+1)){
+		fibList.push(current_fib);
+		current_fib =  fibList[fibList.length - 1] + fibList[fibList.length - 2];
+	}
+	return fibList
+}
+
+
+
+	console.log("js result is:");
+	console.log(sumList(filter(isEven, fibonacciSet(4000000))));
+	console.log("python says the answer is: 4613732");
+
+  </script>
+</body>
+</html>
