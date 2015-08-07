@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Javascript Learning</title>
+</head>
+<body>
+  <h1>Javascript Learning</h1>
+  <h2> Ex 02: Find duplicates </h2>
+  <h3>see console for results of testing!</h3>
+  <script>
+
+// Given an array in Javascript, ***write a function in Javacsript that returns
+// any items that have duplicates***. 
+// The data contained in the array may be an integer or a string, or a boolean, 
+// but it will not be an array or a Javascript object.
+
+
+function findDuplicates(stuffArray) {
+	var testDict = {}
+	var dupeArray = []
+
+	for (var i = 0; i <  stuffArray.length; i++){
+		if (stuffArray[i] in testDict){
+			// in JS indexOf()  returns -1 if item not in array 
+			if (dupeArray.indexOf(stuffArray[i]) === -1){
+				dupeArray.push(stuffArray[i]);
+			}
+		}
+		else {
+			testDict[stuffArray[i]] = "yes";			
+		}
+	}
+
+	return dupeArray
+}
+
+
+
+var votesToGoEatCake = [true, true, true, true]
+
+// Should return in no particular order:
+// [true]
+console.log("Looking for: [true]")
+console.log(findDuplicates(votesToGoEatCake));
+
+
+var hackbrightStudents = ["katie", "amy", "jenny", "katie", "kelley", "katie", "amy"]
+
+// Should return in no particular order:
+// ["katie", "amy"]
+console.log('Looking for: ["katie", "amy"]')
+console.log(findDuplicates(hackbrightStudents))
+
+
+var classroomIds = ["47","12", "19", "22", "26", "99", "30", "50", "324", "003", "44",
+    "33", "346", "354", "44", "235", "45", "34", "44", "590", "09", "099", "0", "1", "3", 
+    "33", "999", "9"]
+// Should return in no particular order:
+// ["44", "33"]
+console.log('Looking for: ["44", "33"]')
+console.log(findDuplicates(classroomIds))
+
+
+var randomJunkIFound = ["katie", "true", true, 19, "gargoyles", "!", 2 + 3, "2 + 3", 
+    19, "19", 19 === "19", 6, false, false]
+
+// Should return in no particular order:
+// [19, false]
+console.log("Looking for: [19, false]")
+console.log(findDuplicates(randomJunkIFound))
+// not passing -- returns [true, 19, "19", false]
+
+
+</script>
+</body>
+</html>
