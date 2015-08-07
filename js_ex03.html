@@ -20,13 +20,18 @@ function findDuplicates(stuffArray) {
 	var dupeArray = []
 
 	for (var i = 0; i <  stuffArray.length; i++){
+		console.log(stuffArray[i]);
+		console.log("testDict: ", testDict);
 		if (stuffArray[i] in testDict){
 			// in JS indexOf()  returns -1 if item not in array 
+			console.log(stuffArray[i], " is in test Dict!")
 			if (dupeArray.indexOf(stuffArray[i]) === -1){
+				console.log(stuffArray[i], " is Not in dupeArray, adding it!");
 				dupeArray.push(stuffArray[i]);
 			}
 		}
 		else {
+			console.log(stuffArray[i], " is NOT in test Dict, adding it!");
 			testDict[stuffArray[i]] = "yes";			
 		}
 	}
@@ -36,29 +41,29 @@ function findDuplicates(stuffArray) {
 
 
 
-var votesToGoEatCake = [true, true, true, true]
+// var votesToGoEatCake = [true, true, true, true]
 
-// Should return in no particular order:
-// [true]
-console.log("Looking for: [true]")
-console.log(findDuplicates(votesToGoEatCake));
-
-
-var hackbrightStudents = ["katie", "amy", "jenny", "katie", "kelley", "katie", "amy"]
-
-// Should return in no particular order:
-// ["katie", "amy"]
-console.log('Looking for: ["katie", "amy"]')
-console.log(findDuplicates(hackbrightStudents))
+// // Should return in no particular order:
+// // [true]
+// console.log("Looking for: [true]")
+// console.log(findDuplicates(votesToGoEatCake));
 
 
-var classroomIds = ["47","12", "19", "22", "26", "99", "30", "50", "324", "003", "44",
-    "33", "346", "354", "44", "235", "45", "34", "44", "590", "09", "099", "0", "1", "3", 
-    "33", "999", "9"]
-// Should return in no particular order:
-// ["44", "33"]
-console.log('Looking for: ["44", "33"]')
-console.log(findDuplicates(classroomIds))
+// var hackbrightStudents = ["katie", "amy", "jenny", "katie", "kelley", "katie", "amy"]
+
+// // Should return in no particular order:
+// // ["katie", "amy"]
+// console.log('Looking for: ["katie", "amy"]')
+// console.log(findDuplicates(hackbrightStudents))
+
+
+// var classroomIds = ["47","12", "19", "22", "26", "99", "30", "50", "324", "003", "44",
+//     "33", "346", "354", "44", "235", "45", "34", "44", "590", "09", "099", "0", "1", "3", 
+//     "33", "999", "9"]
+// // Should return in no particular order:
+// // ["44", "33"]
+// console.log('Looking for: ["44", "33"]')
+// console.log(findDuplicates(classroomIds))
 
 
 var randomJunkIFound = ["katie", "true", true, 19, "gargoyles", "!", 2 + 3, "2 + 3", 
