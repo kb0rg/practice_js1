@@ -15,55 +15,113 @@
 // but it will not be an array or a Javascript object.
 
 
-function findDuplicates(stuffArray) {
-	var testDict = {}
-	var dupeArray = []
+// my busted attempt to switch from dict to array:
 
-	for (var i = 0; i <  stuffArray.length; i++){
-		console.log(stuffArray[i]);
-		console.log("testDict: ", testDict);
-		if (stuffArray[i] in testDict){
-			// in JS indexOf()  returns -1 if item not in array 
-			console.log(stuffArray[i], " is in test Dict!")
-			if (dupeArray.indexOf(stuffArray[i]) === -1){
-				console.log(stuffArray[i], " is Not in dupeArray, adding it!");
-				dupeArray.push(stuffArray[i]);
-			}
-		}
-		else {
-			console.log(stuffArray[i], " is NOT in test Dict, adding it!");
-			testDict[stuffArray[i]] = "yes";			
-		}
-	}
+// function findDuplicates(stuffArray) {
+// 	var dupeArray = []
 
-	return dupeArray
+// 	for (var i = 0; i < stuffArray.length; i++){
+// 		console.log("current stuffArray[i]", stuffArray[i]);
+// 		console.log("dupeArray", dupeArray);
+// 		console.log(dupeArray.indexOf(stuffArray[i]))
+// 		if (dupeArray.indexOf(stuffArray[i]) === -1){
+// 			// in JS indexOf()  returns -1 if item not in array 
+// 			// console.log(stuffArray[i], " is Not in dupeArray, adding it!");
+// 			dupeArray.push(stuffArray[i]);
+// 			}
+// 		}
+// 	return dupeArray
+// }
+
+
+// **********************************
+// **********************************
+// **********************************
+
+// got stuck and sought answers from fellow W15 cohort folks. 
+// here are a couple I like.
+
+// **********************************
+
+// Eleanor:
+//look in dupe array for me, if i'm not there already AND
+    //if I am in items in original array index-after-me to end-of-array
+        //put me in the dupe array
+
+function findDuplicates(myArray){
+    dupeArray = [];
+    for (i = 0; i < myArray.length; i++){
+        var afterMe = myArray.slice(i+1,myArray.length);
+        if (dupeArray.indexOf(myArray[i]) === -1 && afterMe.indexOf(myArray[i]) !== -1){
+            dupeArray.push(myArray[i]);
+        }
+    } console.log(dupeArray);
 }
 
+// **********************************
+// Daria:
+
+// function findDuplicates(list1){
+//     var newList = [];
+//     var lastList = [];
+//     var sortedList = list1.sort();
+    
+    
+//     for (i=0; i < sortedList.length -1; i++){
+//         if (sortedList[i] === sortedList[i+1]){ 
+//             if (newList.indexOf(sortedList[i]) === -1){
+//                 newList.push(sortedList[i]);
+//             }
+//           }
+//           }  
+//     return newList;
+// }
+
+// **********************************
+// Sara F:
+
+  // function findDuplicates(yourArray) {
+  //   duplArray = [];
+  //   for (var i = 0; i < yourArray.length; i++) {
+  //       if (yourArray.indexOf(yourArray[i], i+1) !== -1) {
+  //           if (duplArray.indexOf(yourArray[i]) === -1) {
+  //               duplArray.push(yourArray[i]);
+  //           } 
+  //       }
+  //   } if (duplArray.length === 0) {
+  //       return "No duplicates.";
+  //   } else {
+  //       return duplArray;
+  //   }
+  // }
+
+// **********************************
+// TESTS:
 
 
-// var votesToGoEatCake = [true, true, true, true]
+var votesToGoEatCake = [true, true, true, true]
 
-// // Should return in no particular order:
-// // [true]
-// console.log("Looking for: [true]")
-// console.log(findDuplicates(votesToGoEatCake));
-
-
-// var hackbrightStudents = ["katie", "amy", "jenny", "katie", "kelley", "katie", "amy"]
-
-// // Should return in no particular order:
-// // ["katie", "amy"]
-// console.log('Looking for: ["katie", "amy"]')
-// console.log(findDuplicates(hackbrightStudents))
+// Should return in no particular order:
+// [true]
+console.log("Looking for: [true]")
+console.log(findDuplicates(votesToGoEatCake));
 
 
-// var classroomIds = ["47","12", "19", "22", "26", "99", "30", "50", "324", "003", "44",
-//     "33", "346", "354", "44", "235", "45", "34", "44", "590", "09", "099", "0", "1", "3", 
-//     "33", "999", "9"]
-// // Should return in no particular order:
-// // ["44", "33"]
-// console.log('Looking for: ["44", "33"]')
-// console.log(findDuplicates(classroomIds))
+var hackbrightStudents = ["katie", "amy", "jenny", "katie", "kelley", "katie", "amy"]
+
+// Should return in no particular order:
+// ["katie", "amy"]
+console.log('Looking for: ["katie", "amy"]')
+console.log(findDuplicates(hackbrightStudents))
+
+
+var classroomIds = ["47","12", "19", "22", "26", "99", "30", "50", "324", "003", "44",
+    "33", "346", "354", "44", "235", "45", "34", "44", "590", "09", "099", "0", "1", "3", 
+    "33", "999", "9"]
+// Should return in no particular order:
+// ["44", "33"]
+console.log('Looking for: ["44", "33"]')
+console.log(findDuplicates(classroomIds))
 
 
 var randomJunkIFound = ["katie", "true", true, 19, "gargoyles", "!", 2 + 3, "2 + 3", 
@@ -75,9 +133,6 @@ console.log("Looking for: [19, false]")
 console.log(findDuplicates(randomJunkIFound))
 // not passing -- returns [true, 19, "19", false]
 
-// found why: 
-// "the key will be converted to a string value via toString(), which results in mapping 5 and '5' to the same value "
-// http://stackoverflow.com/questions/368280/javascript-hashmap-equivalent/383540#383540
 
 </script>
 </body>
