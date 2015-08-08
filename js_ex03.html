@@ -75,6 +75,9 @@ console.log("Looking for: [19, false]")
 console.log(findDuplicates(randomJunkIFound))
 // not passing -- returns [true, 19, "19", false]
 
+// found why: 
+// "the key will be converted to a string value via toString(), which results in mapping 5 and '5' to the same value "
+// http://stackoverflow.com/questions/368280/javascript-hashmap-equivalent/383540#383540
 
 </script>
 </body>
