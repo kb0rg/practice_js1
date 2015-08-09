@@ -4,11 +4,11 @@
   <title>Javascript Learning</title>
 </head>
 <body>
-	<h1>Javascript Learning</h1>
-	<h2>Ex 04: JS Objects </h2>
-	<h3>see console for results of testing!</h3>
+    <h1>Javascript Learning</h1>
+    <h2>Ex 04: JS Objects </h2>
+    <h3>see console for results of testing!</h3>
 
-	<script>
+    <script>
 
 // create a JavaScript object that represents a cat. It should have properties for tiredness, hunger, loneliness and happiness.
 
@@ -16,54 +16,57 @@
 
 // Last, write a method that prints out the cat's status in each area.
 
-	var cat = {
-	        tiredness: 20,
-	        hunger: 20,
-	        loneliness: 3,
-	        happiness: 15,
-	        obedience: -5000,
-	        feed: function() {
-	            console.log("Om nom nom")
-	            this.hunger = this.hunger - 5;
-	        },
-	        sleep: function() {
-	        	console.log("snore-purr")
-	        	this.tiredness = this.tiredness -5;
-	        },
-	        pet: function() {
-	        	console.log("purrrrrrrrrrr")
-	        	this.happiness = this.happiness + 10
-	        	this.loneliness = this.loneliness - 1
-	        },
-	        spritz: function() {
-	        	console.log("hissssss")
-	        	this.obedience = this.obedience + 3
-	        },
-	        play: function() {
-	        	console.log("catnip mouse nom nom attack!")
-	        	this.happiness = this.happiness + 15
-	        },
-	        status: function() {
-	        	console.log("Tiredness: ", this.tiredness)
-	        	console.log("Hunger: ", this.hunger)
-	        	console.log("Loneliness: ", this.loneliness)
-	        	console.log("Happiness: ", this.happiness)
-	        	console.log("Obedience: ", this.obedience)
-	        }
+    var cat = {
+            tiredness: 20,
+            hunger: 20,
+            loneliness: 3,
+            happiness: 15,
+            obedience: -5000,
+            feed: function () {
+                console.log("Om nom nom");
+                this.hunger = this.hunger - 5;
+                // this.status();
+            },
+            sleep: function () {
+                console.log("snore-purr");
+                this.tiredness = this.tiredness -5;
+                // this.status();
 
-	};
+            },
+            pet: function () {
+                console.log("purrrrrrrrrrr");
+                this.happiness = this.happiness + 10;
+                this.loneliness = this.loneliness - 1;
+                // this.status();
+            },
+            spritz: function () {
+                console.log("hissssss");
+                this.obedience = this.obedience + 3;
+                // this.status();
+            },
+            play: function () {
+                console.log("catnip mouse nom nom attack!");
+                this.happiness = this.happiness + 15;
+                // this.status();
+            },
+            status: function () {
+                console.log("Tiredness: ", this.tiredness);
+                console.log("Hunger: ", this.hunger);
+                console.log("Loneliness: ", this.loneliness);
+                console.log("Happiness: ", this.happiness);
+                console.log("Obedience: ", this.obedience);
+            }
 
-	cat.status;
-	cat.play;
-	cat.feed;
-	cat.sleep;
-	cat.spritz;
-	cat.pet;
-	cat.status;
+    };
 
+cat.status()
+cat.feed()
+cat.play()
+cat.status()
+cat.spritz()
+cat.pet()
+cat.status()
 
-
-
-	</script>
+    </script>
 </body>
 </html>
