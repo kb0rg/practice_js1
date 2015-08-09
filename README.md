@@ -1,5 +1,7 @@
 Introduction to Javascript
 ==========================
+##(readme, resources, and exercise descriptions cloned from HB curriculum)##
+
 
 ###Python-To-Javascript Dictionary###
 
