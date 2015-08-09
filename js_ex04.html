@@ -16,6 +16,23 @@
 
 // Last, write a method that prints out the cat's status in each area.
 
+
+// EXTRA CREDIT:
+// Make the functions take arguments that increase or decrease arbitrary amounts:
+
+// different types of food make the cat less hungry
+
+// length of sleep
+
+// Petting vs laser pointer—one makes the cat really happy, but also tired. 
+// One makes the cat active and happy, but probably hungry. 
+// Try generalizing this function so that you only have to pass in the argument 
+// "pet" or "laser".
+
+// Extra extra credit: 
+// Make the functions as arbitrary as cats are—make it so the cat sometimes 
+// doesn't want to be petted.
+
     var cat = {
             tiredness: 20,
             hunger: 20,
@@ -27,9 +44,9 @@
                 this.hunger = this.hunger - 5;
                 // this.status();
             },
-            sleep: function () {
+            sleep: function (num) {
                 console.log("snore-purr");
-                this.tiredness = this.tiredness -5;
+                this.tiredness = this.tiredness - num;
                 // this.status();
 
             },
@@ -60,12 +77,16 @@
     };
 
 cat.status()
-cat.feed()
-cat.play()
+// cat.feed()
+// cat.play()
+// cat.status()
+// cat.spritz()
+// cat.pet()
+cat.sleep(5)
 cat.status()
-cat.spritz()
-cat.pet()
+cat.sleep(50)
 cat.status()
+
 
     </script>
 </body>
