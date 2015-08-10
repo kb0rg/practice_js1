@@ -7,10 +7,10 @@ Introduction to Javascript
 
 Some reference material to help you compare Python and JavaScript.
 
-[Conditionals in Javascript](https://github.com/hackbrightacademy/Javascript1/blob/master/if-else-elif.md)  
-[Loops in Javascript](https://github.com/hackbrightacademy/Javascript1/blob/master/loops.md)  
-[Data Structures in Javascript](https://github.com/hackbrightacademy/Javascript1/blob/master/structures.md)  
-[Functions in Javascript](https://github.com/hackbrightacademy/Javascript1/blob/master/function.md)  
+[Conditionals in Javascript](https://github.com/kb0rg/practice_js1/blob/master/if-else-elif.md)  
+[Loops in Javascript](https://github.com/kb0rg/practice_js1/blob/master/loops.md)  
+[Data Structures in Javascript](https://github.com/kb0rg/practice_js1/blob/master/structures.md)  
+[Functions in Javascript](https://github.com/kb0rg/practice_js1/blob/master/function.md)  
 
 ### Running your code
 
@@ -47,14 +47,14 @@ You can do your coding and testing using http://repl.it/languages/JavaScript.
 
 **Please stop and get a code review after EACH exercise.**
 
-Javascript Ex01 - [Sum of multiples of 3 and 5 under 1000](https://github.com/hackbrightacademy/Javascript1/blob/master/ex01.md)
+Javascript Ex01 - [Sum of multiples of 3 and 5 under 1000](https://github.com/kb0rg/practice_js1/blob/master/ex01.md)
 
-Javascript Ex02 - [Sum of even-termed Fibonacci numbers](https://github.com/hackbrightacademy/Javascript1/blob/master/ex02.md)
+Javascript Ex02 - [Sum of even-termed Fibonacci numbers](https://github.com/kb0rg/practice_js1/blob/master/ex02.md)
 
-Javascript Ex03 - [Duplicates](https://github.com/hackbrightacademy/Javascript1/blob/master/ex03.md)
+Javascript Ex03 - [Duplicates](https://github.com/kb0rg/practice_js1/blob/master/ex03.md)
 
-Javascript Ex04 - [Your Command-line Pal That's Fun To Be With](https://github.com/hackbrightacademy/Javascript1/blob/master/ex04.md)
+Javascript Ex04 - [Your Command-line Pal That's Fun To Be With](https://github.com/kb0rg/practice_js1/blob/master/ex04.md)
 
-Javascript Ex05 - [Final Test for the JavaScript Folks](https://github.com/hackbrightacademy/Javascript1/blob/master/ex05.md)
+Javascript Ex05 - [Final Test for the JavaScript Folks](https://github.com/kb0rg/practice_js1/blob/master/ex05.md)
 
 
