@@ -37,6 +37,21 @@
     Prevent the default action
     Change the content of the "text-box-replace" div to "world"
   -->
+
+  <script>
+    //   not sure why this does't work:
+
+    // document.getElementById("get-text").addEventListener("click", function(event){
+    //       event.innerHTML = "world";
+    //       event.preventDefault();
+    //   })
+
+    document.getElementById("get-text").addEventListener("click", function(chText){
+          document.getElementById("get-text").innerHTML = "world";
+          chText.preventDefault();
+      })
+  </script>
+
 </div>
 
 <div id="text-box-color">
@@ -49,6 +64,15 @@
     Change the background color of the "text-box-color" div to red
     Change the content of the "text-box-color" div to "I am the color red!"
   -->
+  <script type="text/javascript">
+    var col = document.getElementById("text-box-color");
+      col.addEventListener("click", function(chCol){
+          chCol.preventDefault();
+          col.style.backgroundColor = "red";
+          col.innerHTML = "I am the color red!";
+      })
+      // I don't understand why preventDefault requires "chCol" but the other commands require "col" 
+  </script>
 </div>
 
 <div id="melon-box">
